@@ -1,6 +1,11 @@
 # Youtubers-Compitition
 Here you can do a compition between two youtubers with your branding.
 
+# Demo 
+http://jayeshmahato.com/subscriberlocal/
+https://www.youtube.com/watch?v=PAKUCpMMM6I
+
+
 
 To use this API you can just do some small settings.
 	*Step 1* 
