@@ -1,4 +1,4 @@
-# Youtubers-Compitition
+# Youtubers-Competition
 Here you can do a compition between two youtubers with your branding.
 
 # Demo 
