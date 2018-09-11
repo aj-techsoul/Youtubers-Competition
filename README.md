@@ -27,5 +27,4 @@ To use this API you can just do some small settings.
    Thats all !!! Enjoy!
    
    https://techsoul.in
-  
-  
+  techsoul4@gmail.com
