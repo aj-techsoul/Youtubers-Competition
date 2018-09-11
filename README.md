@@ -9,7 +9,10 @@ https://www.youtube.com/watch?v=PAKUCpMMM6I
 
 
 To use this API you can just do some small settings.
-	*Step 1* 
+
+	
+
+*Step 1* 
 	
   Get/Enable your Youtube API Key from Google https://console.developers.google.com/ (Just take 2 mins)
   
