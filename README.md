@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=PAKUCpMMM6I
 
 
 
-To use this API you can just do some small settings.
+To use this API you can just do some small settings. Settings starts from 294 line.
 
 	
 
@@ -35,6 +35,10 @@ To use this API you can just do some small settings.
   # Step 4
   
    Set ChangeTime as 3000 for 3sec.
+   
+   # Step 5
+  
+   Set WinLimit as 10000000 for 10 millions. (Don't put commas in the numbers)
    
    
    
