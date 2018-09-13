@@ -47,4 +47,5 @@ To use this API you can just do some small settings. Settings starts from 294 li
    
    
    https://techsoul.in
+   
   techsoul4@gmail.com
