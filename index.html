@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Count IT</title>
+		<title>Youtuber's COMPETITION</title>
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--Import materialize.css-->
@@ -159,12 +159,30 @@ meter { display: none; }
 				https://www.googleapis.com/youtube/v3/channels?part=snippet&forUsername=rockstar4raph&key=AIzaSyBd-pjXo0an2en4N-Hi8691WVArMnvM_vA
 			-->
 
+<div class="row controlbox hide">
+	<div class="col s12">
+			<form class="row" action="" method="POST" >
+						<p class="form-input">
+							<label>Youtuber Id/Username 1</label>
+							<input type="text" name="ypart1" />
+						</p>
+						<p>
+							<label>Number Type</label>
+							<select name="ytype" class="browser-default" >
+								<option value="forUsername">Username</option>
+								<option value="id">Id</option>
+							</select>
+						</p>
+			</form>
+	</div>
+</div>
+
 
 <div class="row red darken-1 main">
 	<div class="row">
 				<div class="col s12 white-text center-align heading">
 						<h1>LIVE COMPETITION</h1>
-						<h4>lets see who crosses <strong class="winlimit"></strong> first</h4>
+						<h4>lets see who crosses <strong class="winlimit yellow-text pulse"></strong> first</h4>
 				</div>
 	</div>
 	<div class="row">
@@ -304,19 +322,37 @@ meter { display: none; }
 			var part2_type = "id";  // id | forUsername / Empty for forUsername /
 
 			// Brand Settings
-			var brand_channel = "UCXz76Fq1mw0IRzojSnr7-Hg";
-			var brand_channel_type = "id";  // id | forUsername / Empty for forUsername /
+			var brand_channel = "rockstar4raph"; // "UCXz76Fq1mw0IRzojSnr7-Hg";
+			var brand_channel_type = "";  // id | forUsername / Empty for forUsername /
 
 			// Change Time
-			var changetime = 3000; // 3000 means 3 seconds.
+			var changetime = 1000; // 3000 means 3 seconds.
 
 			// Win Limit
-			var winlimit = 10014000;
+			var winlimit = 10500000;
 
 // *********************************************************** //
 
 
-
+function numformat(num, digits) {
+  var si = [
+    { value: 1, symbol: "" },
+    { value: 1E3, symbol: "k" },
+    { value: 1E6, symbol: "M" },
+    { value: 1E9, symbol: "B" },
+    { value: 1E12, symbol: "T" },
+    { value: 1E15, symbol: "Qa" },
+    { value: 1E18, symbol: "Qi" }
+  ];
+  var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+  var i;
+  for (i = si.length - 1; i > 0; i--) {
+    if (num >= si[i].value) {
+      break;
+    }
+  }
+  return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+}
 
 
 								function numcomma(num){
@@ -348,7 +384,7 @@ meter { display: none; }
 										var tv = result.items[0].statistics.viewCount;
 										var vv = tv.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-										$(part+' .totalviews').html(vv);
+										$(part+' .totalviews').html(numformat(tv,1));
 
 										var ts = result.items[0].statistics.subscriberCount;
 										var scount =	ts.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -408,7 +444,7 @@ meter { display: none; }
 							$('.part2 .metersub').attr('low',need);
 					}
 
-				$('.winlimit').html(winlimit);
+				$('.winlimit').html(numformat(winlimit,1));
 				checkwinner(winlimit);//100000000
 			}
 
